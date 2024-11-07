@@ -11,7 +11,7 @@ Tk().withdraw()
 file_name = filedialog.askopenfilename()
 csv_name = os.path.dirname(file_name) + '\\' + Path(file_name).stem + '.csv'
 
-if Path(file_name).suffix.lower() == '.sec':
+if Path(file_name).suffix.lower() == '.sec' or Path(file_name).suffix.lower() == '.ref':
     
     tree = ET.parse(file_name)
 
