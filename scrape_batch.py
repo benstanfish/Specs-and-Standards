@@ -16,7 +16,7 @@ list_of_dfs = []
 for file_name in os.listdir(folder_name):
 
     try:                                        # Skip files that contain parsing errors or NO references
-        if (Path(file_name).suffix == '.SEC'):  # and (Path(file_name).stem[:2] != '01'):   #<-- this adds the condition of ignoring Div 01
+        if (Path(file_name).suffix.lower() == '.sec'):  # and (Path(file_name).stem[:2] != '01'):   #<-- this adds the condition of ignoring Div 01
             
             tree = ET.parse(folder_name + '\\' + file_name)
 
